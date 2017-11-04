@@ -92,4 +92,4 @@ var iceChunks = (function() {
 
 })();
 
-typeof module !== 'undefined' ? (typeof module.exports !== 'undefined' ? module.exports = iceBlocks : null) : null; 
+typeof module !== 'undefined' ? (typeof module.exports !== 'undefined' ? module.exports = iceChunks : null) : null; 
