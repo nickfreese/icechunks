@@ -1,0 +1,28 @@
+{
+  "name": "icechunks",
+  "version": "1.0.0",
+  "description": "A Stupid Simple JS Templating Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickfreese/icechunks.git"
+  },
+  "keywords": [
+    "templating",
+    "json",
+    "templates",
+    "html",
+    "templates",
+    "template",
+    "engine"
+  ],
+  "author": "nicholasnackolas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickfreese/icechunks/issues"
+  },
+  "homepage": "https://github.com/nickfreese/icechunks#readme"
+}
