@@ -1,7 +1,7 @@
 # icechunks
-## A Stupid Simple JS Templating Engine
+## A Stupid Simple JS Templating Module, for NodeJs and Clientside applications
 
-###What makes iceChunk special?
+### What makes iceChunk special?
 
 Can you format JSON?  Then you can make an iceChunks template.  When you make an ice chunks template,  you define a tag name, tag attributes, and tag content.  ice chiunk will render your HTML from that information.
 Example:
@@ -60,7 +60,7 @@ var myTemplate = {
 ```
 ---------------------------------------------------------------------------------------------------------
 
-##Directly Rendering Elements
+## Directly Rendering Elements
 
 you can also directly render elements with ``paramTag()`` and ```basicTag()```
 
