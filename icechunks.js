@@ -91,12 +91,5 @@ var iceChunks = (function() {
 }
 
 })();
-/*
-if(typeof module !== 'undefined'){
-if(typeof module.exports!== 'undefined'){
-    module.exports = iceBlocks; 
-}
-}
-*/
 
 typeof module !== 'undefined' ? (typeof module.exports !== 'undefined' ? module.exports = iceBlocks : null) : null; 

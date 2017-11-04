@@ -62,16 +62,18 @@ var myTemplate = {
 
 ##Directly Rendering Elements
 
-you can also directly render elements with paramTag() and basicTag()
+you can also directly render elements with ``paramTag()`` and ```basicTag()```
 
 All these functions do is take a tag name, attributes and values, and the content of the tag then return the HTML.
 
 ---------------------------------------------------------------------------------------------------------
 
-What about variables inside template content? Easy! use ```{{}}``` and call replaceContentVars(<template>, <object defining variabels with key value pairs>);
+What about variables inside template content? Easy! use ```{{}}``` and call ```replaceContentVars(<template>, <object defining variabels with key value pairs>);```
 
 ---------------------------------------------------------------------------------------------------------
 
-You can also set content of template elements using predfiened objects with setTemplateObj(<template>, <key value pairs for content>);
+You can also set content of template elements using predfiened objects with ```setTemplateObj(<template>, <key value pairs for content>);```
 
 ---------------------------------------------------------------------------------------------------------
+
+And thats the skinny of it of iceChunks
