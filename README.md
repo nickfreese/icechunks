@@ -45,20 +45,35 @@ var myTemplate = {
         content: {
             headerText:{
                 tag:'h1',
-                att:'site-h1',
+                att:{
+                    class: 'main-headet-text',
+                    id: 'main-headet-text'
+                },
                 content:'My Header Text'
             },
             headerSubtext:{
                 tag:'h2',
-                att:'site-h2',
                 content:'My Header Sub Text'
             }
         },
     }
 
 };
+
+var renderedContent iceChunks.renderTemplate(myTemplate);
+
 ```
 ---------------------------------------------------------------------------------------------------------
+
+
+## the content parameter
+
+content can be a string, an object or an array.
+
+String - the content will be rendered directly to the defined element.
+Object - Thusis how we next more elements inside elements
+Array - this is how we loop with iceChunks. so we can add string or objects to the array and it will render accordingly
+
 
 ## Directly Rendering Elements
 

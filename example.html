@@ -1,0 +1,79 @@
+<html>
+	<script src="index.js"></script>
+
+    <body>
+    	<div id="app"></div>
+    	<script>
+		
+    var myTemplate = {
+
+    tag:'div',
+    att:{
+    	class:"app-container"
+    },
+    content:{
+
+      header: {
+        tag: 'div',
+        att:{
+            class: 'header',
+            id: 'header'
+        },
+        content: {
+            headerText:{
+                tag:'h1',
+                att:{
+                    class: 'main-headet-text',
+                    id: 'main-headet-text'
+                },
+                content:'My Header Text'
+            },
+            headerSubtext:{
+                tag:'h2',
+                content:'My Header Sub Text'
+            }
+        },
+      },
+
+      body: {
+      	tag: 'div',
+        att:{
+            class: 'main',
+            id: 'main'
+        },
+        content:{
+        	sections:{
+        	    tag:'div',
+        	    att:{
+        	    	class:"section"
+        	    },
+        	    content:["some","different",{
+        	    	span:{
+        	    		tag:"span",
+        	    		att:{
+        	    			style:"color:red;"
+        	    		},
+        	    		content:"nested in list content!"
+        	    	}
+        	    },"content"]
+            }
+        }
+
+      }
+
+
+    }
+
+};
+
+
+
+
+document.querySelector("#app").innerHTML = iceChunks.renderTemplate(myTemplate);
+
+
+	</script>
+
+    </body>
+	
+</html>

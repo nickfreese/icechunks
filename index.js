@@ -28,21 +28,43 @@ var iceChunks = (function() {
     renderTemplate: function(template){
         var paramTag = this.paramTag;
             var contentList = "";
-            
-            if(typeof template.content !== "string" || !template.content instanceof String){
+
+            if((typeof template.content !== "string" || !template.content instanceof String) && !Array.isArray(template.content)){
                 var childList = '';
                 for(var key in template.content){
                 childList += this.renderTemplate(template.content[key]);
                 }
                 contentList = childList;
+
+
+            }
+            else if (Array.isArray(template.content)) {//handle looping
+                var childList = '';
+                for(var i = 0; i < template.content.length; i++){
+
+                  var temp = {
+                    tag: template.tag,
+                    content: template.content[i]
+                  }
+                  if (typeof template.att !== "undefined") {
+                    temp.att = template.att;
+                  }
+      
+                  childList += this.renderTemplate(temp);
+                }
+
+                contentList = childList;
+
             }
             else{
+
                 contentList = template.content;
             }
-            if(typeof template.att !== undefined){
+
+            if(typeof template.att !== undefined && !Array.isArray(template.content)){
             contentList = this.paramTag(template.tag, template.att, contentList);
             }
-            else{
+            else if (!Array.isArray(template.content)){
             contentList = this.basicTag(template.tag, contentList);
             }
         
@@ -92,4 +114,5 @@ var iceChunks = (function() {
 
 })();
 
-typeof module !== 'undefined' ? (typeof module.exports !== 'undefined' ? module.exports = iceChunks : null) : null; 
+//module.exports = iceChunks;
+typeof module !== 'undefined' ? (typeof module.exports !== 'undefined' ? module.exports = iceChunks : null) : (typeof window !== "undefined" ? window.iceChunks  = iceChunks : null); 
