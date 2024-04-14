@@ -1,6 +1,6 @@
 {
   "name": "icechunks",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "A Stupid Simple JS Templating Module",
   "main": "index.js",
   "scripts": {
